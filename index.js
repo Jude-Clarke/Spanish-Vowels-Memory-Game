@@ -98,7 +98,6 @@ function checkAnswer(currentLevel) {
     function gameover(){
       Game_over.play();
     };
-    setTimeout(gameover, 2300);
     buttons.removeClass("clickable");
     $("h3").text("Your Score: ");
     $("#score").text(level - 1);
@@ -108,6 +107,7 @@ function checkAnswer(currentLevel) {
       $("#play-btn").removeClass("pulse");
       returning = true;
     } else {
+      setTimeout(gameover, 2300);
       $("#play-btn").addClass("pulse");
     }
     setTimeout(function(){
